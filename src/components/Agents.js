@@ -20,14 +20,21 @@ function Maps() {
     <>
       <h1 className="agentsHeading">Agents</h1>
       <div className="agentsContainer">
-        {agents.map((agent) => (
-          <div key={agent.uuid} className="agentContainer">
-            <h2>{agent.displayName}</h2>
-            <Link key={agent.uuid} to={`agents/${agent.uuid}`}>
-              <img src={agent.displayIcon} alt={agent.displayName} />
-            </Link>
-          </div>
-        ))}
+        {agents
+          .filter(function (agent) {
+            if (agent.uuid === "ded3520f-4264-bfed-162d-b080e2abccf9") {
+              return false;
+            }
+            return true;
+          })
+          .map((agent) => (
+            <div key={agent.uuid} className="agentContainer">
+              <h2>{agent.displayName}</h2>
+              <Link key={agent.uuid} to={`agents/${agent.uuid}`}>
+                <img src={agent.displayIcon} alt={agent.displayName} />
+              </Link>
+            </div>
+          ))}
       </div>
     </>
   );
