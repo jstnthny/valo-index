@@ -1,4 +1,4 @@
 [[redirects]]
   from = "/*"
-  to = "https://valo-index.netlify.app/"
+  to = "/"
   status = 200
