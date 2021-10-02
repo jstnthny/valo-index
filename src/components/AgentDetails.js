@@ -6,14 +6,18 @@ function Agent({ match }) {
   const [role, setRole] = useState([]);
   const [abilities, setAbilities] = useState([]);
 
+  //Api request gets called after component is loaded
   useEffect(() => {
     const fetchAgent = async () => {
+      // match allows us to grab the id from the agent that was selected, so we have an id to make the api call
       const url = `https://valorant-api.com/v1/agents/${match.params.id}`;
       const response = await fetch(url);
       const data = await response.json();
 
       setAgent(data.data);
+      // Agent Roles
       setRole(data.data.role);
+      // Agent Abilities
       setAbilities(data.data.abilities);
     };
     fetchAgent();
@@ -21,6 +25,7 @@ function Agent({ match }) {
 
   return (
     <div className="agentDetailsContainer">
+      {/* react-router link allows user to go back to the agents page */}
       <Link className="backBtn" to={"/Agents"}>
         Back to Agents
       </Link>
@@ -45,6 +50,7 @@ function Agent({ match }) {
       </div>
 
       <h2>Abilities</h2>
+      {/* Maps through array of agents abilities so it can be rendered onto page */}
       {abilities.map((ability) => (
         <table className="agentAbilities" key={ability.displayName}>
           <thead>

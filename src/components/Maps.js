@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 function Maps() {
   const [maps, setMaps] = useState([]);
 
+  // useEffect hook makes api request when component is rendered
   useEffect(() => {
     getMapRequest();
   }, []);
@@ -14,6 +15,7 @@ function Maps() {
     const response = await fetch(url);
     const data = await response.json();
     // console.log(data);
+    // updates state variable (maps) to store api data
     setMaps(data.data);
   };
 
@@ -22,6 +24,7 @@ function Maps() {
       <h1 className="mapsHeading">Valorant Maps</h1>
       <div className="mapsContainer">
         {maps.map((map) => (
+          // Maps through array of maps to render onto page
           <div key={map.uuid} className="mapContainer">
             <h2 key={map.uuid}>
               <Link to={`maps/${map.uuid}`}>{map.displayName}</Link>
