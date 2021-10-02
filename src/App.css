@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+body {
+  background: #141414;
+  color: whitesmoke;
+  font-family: "Montserrat", sans-serif;
+  margin: 0 auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.srOnly {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.backBtn {
+  text-align: left;
+  color: whitesmoke;
+  text-decoration: none;
+  margin-top: 1em;
+}
+
+.backBtn:hover {
+  color: #f24351;
+  text-decoration: underline;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #f24351;
+  padding-top: 0.7em;
+  display: flex;
+  margin-bottom: 1em;
+}
+
+.navBtn,
+.bi,
+.bi-list {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  padding: 5px;
+  color: #141414;
+  cursor: pointer;
+}
+
+.navbar h1 {
+  margin: 0 2em;
+}
+
+.navbar h1 a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li {
+  margin: 0 3em;
+  list-style: none;
+}
+
+.navbar ul a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar ul li:hover {
+  color: #141414;
+}
+
+/* -------------- */
+
+/* Home */
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/valorantHero1.png);
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.home a {
+  font-size: 2em;
+  margin: 2em;
+  padding: 2em;
+  border-radius: 1.5em;
+  border: 1px solid #141414;
+  background-color: #141414;
+  color: #f24351;
+  text-decoration: none;
+}
+
+.home a:hover {
+  background-color: #383737;
+}
+
+/* Agents Styles */
+.agentsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.agentsHeading {
+  text-align: center;
+}
+
+.agentContainer h2 {
+  text-align: center;
+}
+
+.agentContainer a {
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  margin: 1em;
+}
+.agentContainer {
+  margin: 1em auto;
+  padding: 3em;
+  border: 2px solid #f24351;
+  border-radius: 2em;
+  background-color: #141414;
+  max-width: 300px;
+}
+
+.agentContainer:hover {
+  background-color: #383737;
+}
+
+/* Agent Details */
+
+.agentDetailsContainer {
+  text-align: left;
+  margin: 0 auto;
+  width: 60%;
+}
+
+.flexContainer {
+  display: flex;
+}
+
+.agentDetailsContainer img {
+  max-width: 500px;
+}
+
+.agentDetailsContainer p,
+h2 {
+  text-align: left;
+}
+
+.agentDescriptionContainer {
+  margin: 0 auto;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+}
+.agentDescriptionContainer p {
+  font-size: 1em;
+  margin: 0 auto;
+}
+
+.agentRole {
+  display: flex;
+  margin-top: 1em;
+}
+
+.agentRole img {
+  max-width: 75px;
+  margin-left: 1em;
+}
+
+table {
+  margin: 1em 0;
+}
+
+.agentAbilities td,
+.agentAbilities th {
+  border: 1px solid #f24351;
+  padding: 1em;
+}
+
+.agentAbilities th {
+  text-align: left;
+}
+
+/* Map */
+
+.mapsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.mapsHeading {
+  text-align: center;
+}
+
+.mapContainer {
+  text-align: center;
+  margin: 1.1em;
+}
+
+.mapContainer h2 {
+  text-align: center;
+}
+
+.mapContainer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.mapContainer a:hover {
+  color: #f24351;
+}
+
+.mapContainer img {
+  max-width: 600px;
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+  padding: 1.4em 0;
+  background-color: #f24351;
+  margin-top: auto;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 810px) {
+  /* Nav */
+
+  .navbar {
+    padding: 1em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    height: auto;
+    margin-top: 2em;
+  }
+
+  .navbar ul li {
+    margin-top: 1em;
+  }
+
+  .navBtn,
+  .bi,
+  .bi-list {
+    display: block;
+  }
+
+  /* Home */
+
+  .home {
+    background-position: center;
+  }
+
+  .home a {
+    margin: 0.8em;
+    padding: 0.7em;
+  }
+
+  .agentDetailsContainer {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  /* Mobile */
+
+  .navbar {
+    justify-content: center;
+    padding: 1em;
+    flex-wrap: wrap;
+  }
+
+  /* Agent Details */
+
+  .agentContainer {
+    padding: 2em;
+  }
+
+  .agentDetailsContainer img {
+    max-width: 355px;
+  }
+
+  .flexContainer {
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+
+  /* Maps */
+  .mapContainer img {
+    max-width: 400px;
+  }
+
+  /* Map Details */
+  .mapContainer img {
+    max-width: 370px;
+  }
+}
