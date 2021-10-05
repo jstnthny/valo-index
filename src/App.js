@@ -6,6 +6,7 @@ import Agents from "./components/Agents";
 import MapDetails from "./components/MapDetails";
 import AgentDetails from "./components/AgentDetails";
 import Home from "./components/Home";
+import AgentSelector from "./components/AgentSelector";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/agents/:id" component={AgentDetails} />
           <Route path="/maps" exact component={Maps} />
           <Route path="/maps/:id" component={MapDetails} />
+          <Route path="/agentSelector" component={AgentSelector} />
         </Switch>
       </Router>
     </div>

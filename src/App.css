@@ -234,6 +234,72 @@ table {
   max-width: 600px;
 }
 
+/* Agent Selector */
+.agentSelectorContainer {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.agentSelectorContainer form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.agentSelectorContainer form div {
+  margin: 0 1em;
+}
+
+.agentSelectorContainer form select {
+  background-color: #f24351;
+  border: #f24351;
+  padding: 1em 0.5em;
+  border-radius: 1em;
+}
+
+.agentSelectorContainer form label {
+  margin-right: 1em;
+}
+
+.agentSelectorContainer form option {
+  background-color: #f24351;
+  border: #f24351;
+}
+
+.agentSuggestion {
+  background: rgb(242, 67, 81);
+  background: radial-gradient(
+    circle,
+    rgba(242, 67, 81, 1) 0%,
+    rgba(20, 20, 20, 1) 100%
+  );
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 4em;
+  opacity: 1;
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.agentSuggestion a {
+  text-decoration: none;
+}
+
+.agentSuggestion h2 {
+  text-align: center;
+  color: #141414;
+  padding-top: 1em;
+  margin-top: 1.4em;
+}
+
+.agentSuggestion h2:hover {
+  color: #f24351;
+}
+
+.agentSuggestion img {
+  max-width: 500px;
+}
+
 /* Footer */
 
 footer {
@@ -320,5 +386,15 @@ footer {
   /* Map Details */
   .mapContainer img {
     max-width: 370px;
+  }
+
+  /* Agent Selector */
+
+  .agentSuggestion {
+    width: 70%;
+  }
+
+  .agentSuggestion img {
+    width: 100%;
   }
 }

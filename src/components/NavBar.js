@@ -51,6 +51,9 @@ function NavBar() {
           <Link to="/Maps">
             <li>Maps</li>
           </Link>
+          <Link to="/AgentSelector">
+            <li>Agent Selector</li>
+          </Link>
         </ul>
       )}
     </nav>
