@@ -390,6 +390,14 @@ footer {
 
   /* Agent Selector */
 
+  .agentSelectorContainer form {
+    flex-direction: column;
+  }
+
+  .agentSelectorContainer form div {
+    margin: 0.5em auto;
+  }
+
   .agentSuggestion {
     width: 70%;
   }
